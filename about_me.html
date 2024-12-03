@@ -1,0 +1,753 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Me</title>
+   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: LightPink;
+      overflow-y: auto; 
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: OrangeRed;
+      margin: 10px 0;
+      background-color: LemonChiffon;
+      padding: 10px;
+    }
+
+    header {
+      background-image: url('header 2.png'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 215px;
+    }
+
+    .marquee {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 24px;
+      color: brown;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    
+    .tablink {
+      background-color: #FF1493;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+    }
+
+    .tablink:hover {
+      background-color: #FFC0CB;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 100px 20px;
+      color: white;
+      min-height: calc(100vh - 280px); 
+    }
+
+    #Introduction {background-color: #fba09d;}
+    #Hobbies {background-color: #fbb39d;}
+    #Travel {background-color: #ff9090;}
+    #Song\ Picks {background-color: #ffb6c1;}
+    #Top\ Eats {background-color: #fbb39d;}
+    #My\ Links {background-color: #fba09d;}
+
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+      width: 25%;
+    }
+
+    .dropdown .dropbtn {
+      background-color: #FF1493;
+      color: white;
+      padding: 14px 16px;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #FFC0CB;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FFC0CB;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #fba09d;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+         .main-container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            list-style-type: square;
+            margin-bottom: 10px;
+            color: brown;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+            color: brown;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff1493;
+        }
+
+
+  .hobbies-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hobbies-container h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .hobby-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .hobby-card {
+            background-color: #fff;
+            width: 250px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hobby-card .icon {
+            font-size: 3rem;
+            color: #e05a5a;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .hobby-card:hover .icon {
+            color: #f39c12;
+            transform: rotate(15deg);
+        }
+
+        .hobby-card h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .hobby-card p {
+            font-size: 1rem;
+            color: #777;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+ .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        th {
+            background-color: #e05a5a;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover td {
+            background-color: #f1f1f1;
+        }
+
+        .destination img {
+            width: 100%;
+	    height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .destination-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #e05a5a;
+        }
+
+        .country {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+    
+    .record-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .record-gif {
+      width: 150px;
+      height: 150px;
+      border: 4px solid white;
+      border-radius: 50%;
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    audio {
+      margin-top: 1rem;
+      width: 80%;
+      max-width: 300px;
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+
+    .song-title {
+      font-size: 1.2rem;
+      color: white;
+      margin: 10px 0 5px;
+    }
+
+    .song-artist {
+      font-size: 1rem;
+      color: #f7eaea;
+      margin-bottom: 10px;
+    }
+    
+      .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .food-card {
+            background-color: #ffe8d6;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .food-card:hover {
+            transform: scale(1.05);
+        }
+
+        .food-img {
+            width: 100%;
+            border-radius: 8px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .food-title {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #e05a5a;
+        }
+
+        .food-description {
+            font-size: 1rem;
+            color: #555;
+        }
+
+      
+ .social-container {
+            text-align: center;
+            background: lemonchiffon;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .social-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-links a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links a:hover img {
+            transform: scale(1.2);
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 15px;
+
+.go-to-main-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #FF1493; 
+      color: white; 
+      font-size: 18px;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none; 
+      margin: 30px auto 50px;
+      width: auto;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .go-to-main-btn:hover {
+      background-color: #FFC0CB; 
+    }
+
+
+  </style>
+</head>
+<body>
+
+<h1>╰⪼ ABOUT ME♡</h1>
+
+<header>
+  <div class="marquee">
+    Hello there! I'm so glad you found your way here. Dive into my little corner of the web, explore my world, and get to know me!
+  </div>
+</header>
+
+<button class="tablink" onclick="openPage('Introduction', this, '#fba09d')">Introduction</button>
+<button class="tablink" onclick="openPage('Hobbies', this, '#fbb39d')" id="defaultOpen">Hobbies</button>
+<button class="tablink" onclick="openPage('Travel', this, '#ff9090')">Travel</button>
+
+<!-- Dropdown for About -->
+<div class="dropdown">
+  <button class="dropbtn">Others</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="openPage('Song Picks', this, '#ffb6c1')">Song Picks</a>
+    <a href="#" onclick="openPage('Top Eats', this, '#fbb39d')">Top Eats</a>
+    <a href="#" onclick="openPage('My Links', this, '#fba09d')">My Links</a>
+  </div>
+</div>
+
+<div id="Introduction" class="tabcontent">
+   <main class="main">
+       <font color="brown">
+         <h2>Myself</h2>
+        <div class="image-container">
+           
+            <img src="myself2.jpg" alt="Profile Picture">
+        </div>
+<center>
+        <p>Hello! My name is Nurnatasha Sofea binti Mohd Rozali. I am a passionate and enthusiastic individual who loves learning new things and embracing challenges. Here's a little about me. </p>
+         
+</center>
+        
+    <h2>Fun Facts</h2>
+            <ul>
+                <li>I can read a 300-page novel in one day.</li>
+                <li>I've traveled to more than 2 countries.</li>
+                <li>I have a knack for remembering birthdays – even of people I met once!</li>
+                <li>I have a collection of over 200 photographs of sunsets.</li>
+            </ul>
+
+      <h2>Skills</h2>
+            <ol>
+                <li>Emotional Intelligence</li>
+                <li>Financial Management</li>
+                <li>Skilled in photo editing </li>
+                <li>Problem-solving and analytical thinking</li>
+            </ol>
+</div>
+
+<div id="Hobbies" class="tabcontent">
+  <h2>My Hobbies</h2>
+        <div class="hobby-cards">
+            <div class="hobby-card">
+                <div class="icon">💻</div>
+                <h3>Coding</h3>
+                <p>I enjoy writing code to solve problems and build creative solutions in software development.</p>
+            </div>
+
+            <div class="hobby-card">
+                <div class="icon">✈️</div>
+                <h3>Traveling</h3>
+                <p>Exploring new countries and experiencing different cultures is one of my favorite things to do.</p>
+            </div>
+
+            <div class="hobby-card">
+                <div class="icon">📸</div>
+                <h3>Photography</h3>
+                <p>Capturing the world through the lens is a creative outlet that allows me to express myself.</p>
+            </div>
+
+            <div class="hobby-card">
+                <div class="icon">🍳</div>
+                <h3>Cooking</h3>
+                <p>Cooking delicious meals brings me joy and allows me to experiment with new flavors and ingredients.</p>
+            </div>
+        </div>
+    </div>
+
+<div id="Travel" class="tabcontent">
+  <h2>My Dream Travel Destinations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Country</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="destination-name">Paris</td>
+                    <td class="country">France</td>
+                    <td class="description">Known as the "City of Light", Paris is famous for its art, fashion, and culture.</td>
+                    <td class="destination">
+                        <img src="paris.jpg" alt="Paris">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="destination-name">Kyoto</td>
+                    <td class="country">Japan</td>
+                    <td class="description">A historical city filled with temples, shrines, and traditional wooden houses.</td>
+                    <td class="destination">
+                        <img src="kyoto.jpg" alt="Kyoto">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="destination-name">Santorini</td>
+                    <td class="country">Greece</td>
+                    <td class="description">A stunning island with white-washed buildings, blue domed churches, and breathtaking sunsets.</td>
+                    <td class="destination">
+                        <img src="greece.jpg" alt="Santorini">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="destination-name">New Zealand</td>
+                    <td class="country">New Zealand</td>
+                    <td class="description">Known for its natural beauty, from lush rainforests to snow-capped mountains.</td>
+                    <td class="destination">
+                        <img src="nz.jpg" alt="New Zealand">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="destination-name">Machu Picchu</td>
+                    <td class="country">Peru</td>
+                    <td class="description">An ancient Incan city set high in the Andes Mountains with breathtaking views and history.</td>
+                    <td class="destination">
+                        <img src="peru1.png" alt="Machu Picchu">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+
+<div id="Song Picks" class="tabcontent">
+  <h2>Song Picks</h2>
+  <div class="record-container">
+    <img src="vinyl.gif" alt="vinyl" width="300" >
+    <p class="song-title">IZNA</p>
+    <p class="song-artist">Izna</p>
+    <audio controls>
+      <source src="izna.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  
+  <div class="record-container">
+   <img src="vinyl.gif" alt="vinyl" width="300" >
+    <p class="song-title">IWALY</p>
+    <p class="song-artist">I-lander</p>
+    <audio controls>
+      <source src="iwaly.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  
+  <div class="record-container">
+ <img src="vinyl.gif" alt="vinyl" width="300">
+    <p class="song-title">HOWLING</p>
+    <p class="song-artist">XG</p>
+    <audio controls>
+      <source src="xg.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div id="Top Eats" class="tabcontent">
+ <h2>Top Eats</h2>
+      <main class="main">
+        <section class="food-card">
+            <img src="food1.jpg" alt="Food 1" class="food-img">
+            <h2 class="food-title">Nasi Kukus</h2>
+            <p class="food-description">Fragrant and tender, with spices that pack a punch in every bite.</p>
+        </section>
+        <section class="food-card">
+            <img src="food2.jpg" alt="Food 2" class="food-img">
+            <h2 class="food-title">Nasi Goreng Ayam Buttermilk</h2>
+            <p class="food-description">Creamy and luscious, with a buttery sauce that melts in your mouth.</p>
+        </section>
+        <section class="food-card">
+            <img src="food3.jpg" alt="Food 3" class="food-img">
+            <h2 class="food-title">Nasi Ayam Geprek</h2>
+            <p class="food-description">Crispy and fiery, bursting with bold, spicy sambal flavors.</p>
+        </section>
+        <section class="food-card">
+            <img src="food4.jpg" alt="Food 1" class="food-img">
+            <h2 class="food-title">Nasi Ayam Gepuk</h2>
+            <p class="food-description">Soft yet smoky, with a tangy sambal kick that’s simply addictive.</p>
+        </section>
+        <section class="food-card">
+            <img src="food5.jpg" alt="Food 2" class="food-img">
+            <h2 class="food-title">Nasi Lemak</h2>
+            <p class="food-description">Rich and fragrant, with every element perfectly balanced for indulgence.</p>
+        </section>
+        <section class="food-card">
+            <img src="food6.jpg" alt="Food 3" class="food-img">
+            <h2 class="food-title">Ayam Kicap</h2>
+            <p class="food-description">Sweet and savory, with soy sauce-infused goodness in every bite.</p>
+        </section>
+        <section class="food-card">
+            <img src="food7.jpg" alt="Food 2" class="food-img">
+            <h2 class="food-title">Chicken Chop</h2>
+            <p class="food-description">Juicy and hearty, with sauces that bring comfort in every forkful.</p>
+        </section>
+        <section class="food-card">
+            <img src="food8.jpg" alt="Food 3" class="food-img">
+            <h2 class="food-title">Nasi Goreng Kampung</h2>
+            <p class="food-description">Sweet and creamy, with endless flavors to choose from.</p>
+        </section>
+
+
+    </main>
+</div>
+
+<div id="My Links" class="tabcontent">
+   <h2>Connect With Me</h2>
+        <div class="social-links">
+            
+            <a href="https://www.instagram.com/svfealv" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+
+            
+            <a href="https://www.tiktok.com/@x1oneit1" target="_blank">
+                <img src="tiktok.png" alt="TikTok">
+            </a>
+
+            
+            <a href="https://pin.it/71NG1uEvr" target="_blank">
+                <img src="pinterest.jpg" alt="Pinterest">
+            </a>
+        </div>
+    <center><p class="caption">Click the icons to visit my social media profiles!</p></center>
+    </div>
+
+<center><a href="main_page.html" class="go-to-main-btn">Go to Main Page</a></center>
+
+<script>
+
+ function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    if (elmnt) elmnt.style.backgroundColor = color;
+  }
+  document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

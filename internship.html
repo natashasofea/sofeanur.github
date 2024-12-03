@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Internship Experience</title>
+  
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8d9e4; 
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #e57373; 
+      margin-bottom: 30px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .video-container {
+      text-align: center;
+      margin-bottom: 40px;
+      background-color: #ffe4e1;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container h2 {
+      color: #e57373;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .video-container video {
+      width: 80%; 
+      max-width: 640px; 
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery .card {
+      background-color: #ffffff;
+      width: 280px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .gallery .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .gallery .card .content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .gallery .card h3 {
+      font-size: 20px;
+      color: #e57373;
+      margin-bottom: 10px;
+    }
+
+    .gallery .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    
+    @media (max-width: 768px) {
+      .gallery {
+        justify-content: center;
+      }
+
+      .gallery .card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Internship Experience</h1>
+
+  
+  <div class="video-container">
+    <h2>Internship Video</h2>
+    <video controls>
+      <source src="intern11.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  
+  <div class="video-container">
+    <h2>Internship Additional Video</h2>
+    <video controls>
+      <source src="intern12.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  
+  <div class="gallery">
+    <div class="card">
+      <img src="intern1.jpg" alt="Internship Image 1">
+      <div class="content">
+        <h3>Learning process</h3>
+        <p>I learn how to make memo.</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="intern2.jpg" alt="Internship Image 2">
+      <div class="content">
+        <h3>My last day</h3>
+        <p>I got present for my last day.</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="intern3.jpg" alt="Internship Image 3">
+      <div class="content">
+        <h3>File Case</h3>
+        <p>I learn how to open and closed file.</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="intern4.jpg" alt="Internship Image 4">
+      <div class="content">
+        <h3>Arranging Files</h3>
+        <p>We work together to arrange the files.</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="intern5.jpg" alt="Internship Image 5">
+      <div class="content">
+        <h3>Many closed report</h3>
+        <p>I need to closed the reports and put it in the files.</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="intern6.jpg" alt="Internship Image 6">
+      <div class="content">
+        <h3>My first day</h3>
+        <p>It is my first time doing internship.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="intern7.jpg" alt="Internship Image 7">
+      <div class="content">
+        <h3>Serve Customer</h3>
+        <p>Answer all the questions from the customer.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="intern8.jpg" alt="Internship Image 8">
+      <div class="content">
+        <h3>My last day</h3>
+        <p>We take picture together.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="intern9.jpg" alt="Internship Image 9">
+      <div class="content">
+        <h3>My first time</h3>
+        <p>My first time learning MPKu websites.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="intern10.jpg" alt="Internship Image 10">
+      <div class="content">
+        <h3>My table</h3>
+        <p>My sit in MPKu.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

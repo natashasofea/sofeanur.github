@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<h1 style="border: 2px solid white;"><marquee>ASSALAMUALAIKUM WBT EVERYONE! ^_^</marquee></h1>
+<img src="cat.gif" alt="cat" width="300" height="222">
+
+
+   
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+            background-image: url('sofea.png'); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: LightGoldenRodYellow;
+        }
+        p {
+            color: beige;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .get-started-button {
+            background-color: #FF69B4; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .get-started-button:hover {
+            background-color: #FF1493; 
+        }
+
+        /* Style for the clock */
+        #clock {
+            margin-top: 20px;
+            font-size: 24px;
+            color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="background-color:brown;">Welcome to My Personal Website <span style='font-size:30px;'>&#129321;</span></h1>
+        <p><i style="background-color:brown;">Discover more about me and my interests</i></p>
+    </header>
+
+    <div class="button-container">
+        <a href="about_me.html" target="_blank" class="get-started-button">About Me</a>
+        <a href="education.html" target="_blank" class="get-started-button">My Education</a>
+        <a href="experience1.html" target="_blank" class="get-started-button">My Experience</a>
+        <a href="family.html" target="_blank" class="get-started-button">My Family</a>
+        <a href="gallery.html" target="_blank" class="get-started-button">Sofea's Gallery</a>
+    </div>
+
+
+    <p>
+        <audio controls>
+            <source src="drip.ogg" type="audio/ogg">
+            <source src="drip.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </p>
+
+    <!-- Clock -->
+    <div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+
+            // Format time
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initialize the clock when the page loads
+        updateClock();
+    </script>
+
+</body>
+</html>

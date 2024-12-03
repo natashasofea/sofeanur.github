@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Family</title>
+ 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: LightPink;  
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: OrangeRed;
+      margin: 10px 0;
+      background-color: LemonChiffon;
+      padding: 10px;
+    }
+
+    
+    header {
+      background-image: url('header 2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 215px;
+    }
+
+    .marquee {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 24px;
+      color: brown;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+   
+    .tablink {
+      background-color: #FF1493;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 100%; 
+    }
+
+    .tablink:hover {
+      background-color: #FF1493;
+    }
+
+    .tabcontent {
+      display: block; 
+      padding: 100px 20px;
+      height: calc(100vh - 280px);
+      color: white;
+    }
+
+    #Home {
+      background-color: lightpink;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #383838;
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    .main-content {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .main-content img {
+      width: 50%; 
+      height: auto;     
+     object-fit: cover;
+      border-radius: 10px;  
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+
+    .family-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .family-section h2 {
+      font-size: 2.2rem;
+      color: #ff6f61;
+      margin-bottom: 30px;
+    }
+
+    .family-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;  
+      grid-template-rows: auto auto auto; 
+      gap: 20px;
+      justify-items: center;  
+      align-items: center;   
+    }
+
+   
+    .family-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .family-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .family-card img {
+      width: 100px;  
+      height: 130px;  
+      object-fit: cover;
+      border-radius: 5px;
+      margin: 10px auto;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .family-card .content {
+      padding: 20px;
+    }
+
+    .family-card h3 {
+      font-size: 1.5rem;
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    .family-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .main-content img {
+        width: 200px;
+        height: 250px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .family-card {
+        width: 90%;
+      }
+    }
+
+    
+    .family-grid .family-card:last-child {
+      grid-column: span 2; 
+      justify-self: center; 
+    }
+
+a.button {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: #FF1493;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+a.button:hover {
+  background-color: #FF69B4;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+
+<h1>╰⪼ MY FAMILY♡</h1>
+
+<header>
+  <div class="marquee">
+    Hello there! I'm so glad you found your way here. Dive into my little corner of the web, explore my world, and get to know me!
+  </div>
+</header>
+
+<button class="tablink" onclick="openPage('Home', this, '#FF1493')">Home</button>
+
+<div id="Home" class="tabcontent">
+ 
+  <div class="main-content">
+   <center><h2>My Lovely Family</h2></center>
+    <img src="famtree.png" alt="My Picture">
+    <h2>Our Family Journey</h2>
+    <p>Family is not an important thing, it's everything. Here is a small glimpse into the people who make my life complete.</p>
+  </div>
+
+  <section class="family-section">
+    <h2>Meet My Family</h2>
+    <div class="family-grid">
+  
+      <div class="family-card">
+        <img src="mom.jpg" alt="Mom">
+        <div class="content">
+          <h3>Mom</h3>
+          <p>She is the heart of our family, always there to love and care for us.</p>
+        </div>
+      </div>
+
+
+      <div class="family-card">
+        <img src="dad.jpg" alt="Dad">
+        <div class="content">
+          <h3>Dad</h3>
+          <p>The protector and guide, who leads our family with wisdom and strength.</p>
+        </div>
+      </div>
+
+
+      <div class="family-card">
+        <img src="sibs1.jpg" alt="Sibling">
+        <div class="content">
+          <h3>Me</h3>
+          <p>The first daughter, always joyful, spreads love and laughter everywhere.</p>
+        </div>
+      </div>
+
+
+      <div class="family-card">
+        <img src="sibs2.jpg" alt="Sibling">
+        <div class="content">
+          <h3>Younger Sister</h3>
+          <p>The second daughter, creative and adventurous, brightens our days consistently.
+
+</p>
+        </div>
+      </div>
+
+  
+      <div class="family-card">
+        <img src="sibs3.jpg" alt="Sibling">
+        <div class="content">
+          <h3>Younger Brother</h3>
+          <p>The last son, playful and energetic, brings endless joy and laughter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<script>
+  function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    if (elmnt) elmnt.style.backgroundColor = color;
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("Home").style.display = "block"; // Automatically show Home page
+</script>
+
+<center><a href="main_page.html" class="button">Go to Main Page</a></center>
+
+
+</body>
+</html>

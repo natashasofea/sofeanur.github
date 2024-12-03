@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sofea's Gallery</title>
+
+
+  <style>
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FFEBEE;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: #E91E63;
+      margin: 20px 0;
+      text-shadow: 2px 2px 4px #FF80AB;
+    }
+
+    header {
+      background-image: url('header 2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 215px;
+
+    }
+
+    .marquee {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 24px;
+      color: brown;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #E91E63;
+      padding: 10px 0;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      font-size: 18px;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #FF80AB;
+      border-radius: 5px;
+    }
+
+   
+    section {
+      padding: 30px;
+      margin: 20px auto;
+      background-color: LemonChiffon;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #E91E63;
+      margin-bottom: 20px;
+    }
+
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery-grid div {
+      position: relative;
+      width: 200px;
+      height: 300px; 
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid div:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-grid div span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .gallery-grid div:hover span {
+      background: rgba(233, 30, 99, 0.8);
+    }
+
+a.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #E91E63; 
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+a.button:hover {
+  background-color: #FF80AB; 
+  transform: scale(1.05); 
+}
+
+  </style>
+</head>
+<body>
+
+<h1 style="background-color:LemonChiffon;">SOFEA'S GALLERY</h1>
+
+
+<header>
+  <div class="marquee">
+    Welcome to my gallery! Explore the moments and memories captured.
+  </div>
+</header>
+
+<nav>
+  <a href="#family">My Family</a>
+  <a href="#pet">My Pet</a>
+  <a href="#friends">My Friends</a>
+  <a href="#myself">Myself</a>
+</nav>
+
+
+<section id="family">
+  <h2>My Family</h2>
+  <div class="gallery-grid">
+    <div><img src="fam1.jpg" alt="Family 1"><span>Family Picnic</span></div>
+    <div><img src="fam2.jpg" alt="Family 2"><span>Family Gathering </span></div>
+    <div><img src="fam3.jpg" alt="Family 3"><span>Eid Mubarak</span></div>
+    <div><img src="fam4.jpg" alt="Family 4"><span>Weekend Walk</span></div>
+    <div><img src="fam5.jpg" alt="Family 5"><span>Special Moment</span></div>
+    <div><img src="fam6.jpg" alt="Family 6"><span>My Lovely Parents</span></div>
+    <div><img src="fam7.jpg" alt="Family 7"><span>Family Dinner</span></div>
+    <div><img src="fam8.jpg" alt="Family 8"><span>My Siblings</span></div>
+    <div><img src="fam9.jpg" alt="Family 9"><span>Queen and Princesses</span></div>
+    <div><img src="fam10.jpg" alt="Family 10"><span>Game Night</span></div>
+  </div>
+</section>
+
+
+<section id="pet">
+  <h2>My Pet</h2>
+  <div class="gallery-grid">
+    <div><img src="cat1.jpg" alt="Cat 1"><span>My Mimi</span></div>
+    <div><img src="cat2.jpg" alt="Cat 2"><span>Playful Mica</span></div>
+    <div><img src="cat3.jpg" alt="Cat 3"><span>So Cute!</span></div>
+    <div><img src="cat4.jpg" alt="Cat 4"><span>Broyen at MPKu</span></div>
+    <div><img src="cat5.jpg" alt="Cat 5"><span>House Rent Cat</span></div>
+    <div><img src="cat6.jpg" alt="Cat 6"><span>Broyen Pic</span></div>
+    <div><img src="cat7.jpg" alt="Cat 7"><span>White Emon </span></div>
+    <div><img src="cat8.jpg" alt="Cat 8"><span>My Kittens</span></div>
+    <div><img src="cat9.jpg" alt="Cat 9"><span>College Cat</span></div>
+    <div><img src="cat10.jpg" alt="Cat 10"><span>My Forever Cat</span></div>
+  </div>
+</section>
+
+
+<section id="friends">
+  <h2>My Friends</h2>
+  <div class="gallery-grid">
+    <div><img src="friends1.jpg" alt="Friends 1"><span>Internship Pic</span></div>
+    <div><img src="friends2.jpg" alt="Friends 2"><span>Trio Selfie</span></div>
+    <div><img src="friends3.jpg" alt="Friends 3"><span>After Exam Pic</span></div>
+    <div><img src="friends4.jpg" alt="Friends 4"><span>My Roommate</span></div>
+    <div><img src="friends5.jpg" alt="Friends 5"><span>Trio Date</span></div>
+    <div><img src="friends6.jpg" alt="Friends 6"><span>Eid Mubarak</span></div>
+    <div><img src="friends7.jpg" alt="Friends 7"><span>Picnic Day</span></div>
+    <div><img src="friends8.jpg" alt="Friends 8"><span>Before Class Pic</span></div>
+    <div><img src="friends9.jpg" alt="Friends 9"><span>Weekend Hiking</span></div>
+    <div><img src="friends10.jpg" alt="Friends 10"><span>Casual Meetup</span></div>
+  </div>
+</section>
+
+
+<section id="myself">
+  <h2>Myself</h2>
+  <div class="gallery-grid">
+    <div><img src="myself1.jpg" alt="Myself 1"><span>Relaxing Evening</span></div>
+    <div><img src="myself2.jpg" alt="Myself 2"><span>Night Photo</span></div>
+    <div><img src="myself3.jpg" alt="Myself 3"><span>Cinema Time</span></div>
+    <div><img src="myself4.jpg" alt="Myself 4"><span>Eid Mubarak</span></div>
+    <div><img src="myself5.jpg" alt="Myself 5"><span>Random Pic</span></div>
+    <div><img src="myself6.jpg" alt="Myself 6"><span>Mirror Photo</span></div>
+    <div><img src="myself7.jpg" alt="Myself 7"><span>Morning Smile</span></div>
+    <div><img src="myself8.jpg" alt="Myself 8"><span>0.5 Selfie</span></div>
+    <div><img src="myself9.jpg" alt="Myself 9"><span>Going Out</span></div>
+    <div><img src="myself10.jpg" alt="Myself 10"><span>Cool Outfit</span></div>
+  </div>
+</section>
+
+<center><a href="main_page.html" class="button">Go to Main Page</a></center>
+
+
+
+</body>
+</html>
+

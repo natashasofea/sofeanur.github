@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Education</title>
+ 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: LightPink;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: OrangeRed;
+      margin: 10px 0;
+      background-color: LemonChiffon;
+      padding: 10px;
+    }
+
+    header {
+      background-image: url('header 2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 215px;
+    }
+
+    .marquee {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 24px;
+      color: brown;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .tablink {
+      background-color: #FF1493;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+    }
+
+    .tablink:hover {
+      background-color: #FFC0CB;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 50px 20px;
+      color: brown;
+      min-height: calc(100vh - 215px - 50px); 
+      margin-bottom: 0;
+    }
+
+    #Primary\ School {background-color: #fbb39d;}
+    #High\ School {background-color: #FFB6C1;}
+    #University {background-color: #ff9090;}
+    #Achievement {background-color: #fa879a;}
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .education-info .details {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+
+    .education-info .details h2 {
+      font-size: 2rem;
+      color: #ff7eb3;
+      margin-bottom: 15px;
+    }
+
+    .education-info .details p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .education-info .map {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+
+    .education-info .map img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .subjects {
+      margin-top: 30px;
+      background-color: #ffe8d6;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .subjects h3 {
+      font-size: 1.8rem;
+      color: #e05a5a;
+    }
+
+    ul.custom-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.custom-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+    }
+
+    ul.custom-list li::before {
+      content: "📚"; 
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      color: #ff7eb3;
+    }
+
+    @media (max-width: 768px) {
+      .education-info {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .education-info .details,
+      .education-info .map {
+        width: 100%;
+      }
+    }
+.go-to-main-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #FF1493; 
+      color: white; 
+      font-size: 18px;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none; 
+      margin: 30px auto 50px;
+      width: auto;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .go-to-main-btn:hover {
+      background-color: #FFC0CB; 
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>╰⪼ EDUCATION♡</h1>
+
+<header>
+  <div class="marquee">
+    Hello there! I'm so glad you found your way here. Dive into my little corner of the web, explore my world, and get to know me!
+  </div>
+</header>
+
+<button class="tablink" onclick="openPage('Primary School', this, '#fbb39d')">Primary School</button>
+<button class="tablink" onclick="openPage('High School', this, '#FFB6C1')" id="defaultOpen">High School</button>
+<button class="tablink" onclick="openPage('University', this, '#ff9090')">University</button>
+<button class="tablink" onclick="openPage('Achievement', this, '#fa879a')">Achievement</button>
+
+<div id="Primary School" class="tabcontent">
+  <div class="container">
+    <h1>My Primary School Education</h1>
+    <div class="education-info">
+      <div class="details">
+        <h2>About My Primary School</h2>
+        <p>I attended Sekolah Kebangsaan Putra Utama, where I developed a passion for learning.</p>
+        <p>The school provided excellent academic programs and encouraged me to explore various extracurricular activities that shaped my growth.</p>
+      </div>
+      <div class="map">
+        <h2>Our Location</h2>
+        <a href="https://maps.app.goo.gl/PszfySCmUMie7eFq7" target="_blank">
+        <img src="map1.png" alt="School Map"></a>
+      </div>
+    </div>
+    <div class="subjects">
+      <h3>Subjects I Studied</h3>
+      <ul class="custom-list">
+        <li>Mathematics</li>
+        <li>English</li>
+        <li>Bahasa Melayu</li>
+        <li>Science</li>
+        <li>History</li>
+        <li>Pendidikan Islam</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="High School" class="tabcontent">
+  <div class="container">
+    <h1>My High School Education</h1>
+    <div class="education-info">
+      <div class="details">
+        <h2>About My High School</h2>
+        <p>I attended Sekolah Menengah Kebangsaan Kulai Besar, a school where I honed my academic skills and grew both personally and academically, participating in various extracurricular activities that shaped my character.</p>
+      </div>
+      <div class="map">
+        <h2>Our Location</h2>
+         <a href="https://maps.app.goo.gl/aGQMTZnCB1HqEqKz6" target="_blank">
+        <img src="map2.png" alt="School Map"></a>
+      </div>
+    </div>
+    <div class="subjects">
+      <h3>Subjects I Studied</h3>
+      <ul class="custom-list">
+        <li>Mathematics</li>
+        <li>English Language & Literature</li>
+        <li>Account</li>
+        <li>Business</li>
+        <li>Additional Mathematics</li>
+        <li>Science</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="University" class="tabcontent">
+   <div class="container">
+    <h1>My University Education</h1>
+    <div class="education-info">
+      <div class="details">
+        <h2>About My University</h2>
+        <p>I attended Universiti Teknologi Mara Kampus Segamat, where I deepened my knowledge and skills in my field of study. The university provides a dynamic learning environment and offers excellent facilities.</p>
+        
+      </div>
+      <div class="map">
+        <h2>Our Location</h2>
+        <a href="https://maps.app.goo.gl/fbn7uMxrgBgdhgGf7" target="_blank">
+        <img src="map3.png" alt="School Map"></a>
+      </div>
+    </div>
+    <div class="subjects">
+      <h3>Subjects I Studied</h3>
+      <ol>
+        <li>IMD310</li>
+        <li>IMD313</li>
+        <li>IMD316</li>
+        <li>IMD317</li>
+        <li>IMD318</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div id="Achievement" class="tabcontent">
+  <div class="container">
+     <h1>My Achievement as a Student Who Learnt About Information Management</h1>
+
+  <div class="achievement">
+    <h2>Learning Information Management Concepts</h2>
+    <p>Throughout my studies, I developed a deep understanding of key aspects in <strong>Information Management</strong> (IM). Some of the major topics I focused on included:</p>
+    <ul>
+      <li><abbr title="Enterprise Resource Planning">ERP</abbr> Systems</li>
+      <li><abbr title="Database Management System">DBMS</abbr></li>
+      <li>Knowledge <sup>Management</sup> (KM)</li>
+    </ul>
+
+    <p>One of my major accomplishments was learning how to manage and organize vast amounts of <sub>data</sub>, focusing on its retrieval and storage processes. For example, I studied how <strong>XML</strong> and <strong>HTML</strong> play a crucial role in structuring and presenting data effectively.</p>
+
+    <p>As part of my hands-on learning, I also worked on a project where I built a data management system that could efficiently track and store customer information, providing insights into their behavior patterns. This allowed me to apply my theoretical knowledge into a practical context.</p>
+
+    <p>This experience helped me enhance my understanding of how information can be transformed into actionable insights within any business environment, further developing my <em>analytical thinking</em> and <em>problem-solving skills</em>.</p>
+
+    <pre>
+   
+    &lt;div class="user-info"&gt;
+        &lt;p&gt;Customer ID: 98765&lt;/p&gt;
+        &lt;p&gt;Name: Sofea;/p&gt;
+    &lt;/div&gt;
+    </pre>
+
+    <p><em>Learning to work with databases</em> and understanding the importance of efficient data management were some of the most rewarding parts of this project.</p>
+  </div>
+
+<center><a href="main_page.html" class="go-to-main-btn">Go to Main Page</a></center>
+
+<script>
+  function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    if (elmnt) elmnt.style.backgroundColor = color;
+  }
+  document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
+
+
